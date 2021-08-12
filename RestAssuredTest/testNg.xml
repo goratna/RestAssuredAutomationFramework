@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Example test run">
+    <test name="Get">
+        <classes>
+            <class name="com.shaku.AddPersonTest"/>
+        </classes>
+    </test>
+   <!--  <test name="Delete">
+        <classes>
+            <class name="com.shaku.PesronGetList"/>
+        </classes>
+    </test>
+    <test name="Post">
+        <classes>
+            <class name="com.shaku.UpdateUserTest"/>
+        </classes>
+    </test>
+    -->
+</suite>
