@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Example test run]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Post(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.shaku.UpdateUserTest">
+      <class name="com.shaku.GetInvoiceTest">
         <methods>
-          <include name="testUpdateUser"/>
           <include name="init"/>
-          <include name="testUpdateUser_200"/>
+          <include name="testGetInvoicer_200"/>
         </methods>
-      </class> <!-- com.shaku.UpdateUserTest -->
+      </class> <!-- com.shaku.GetInvoiceTest -->
     </classes>
-  </test> <!-- Post(failed) -->
-</suite> <!-- Failed suite [Example test run] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

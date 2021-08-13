@@ -8,51 +8,12 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Example test run</th></tr>
-<tr><td><a href="#t0">Get</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6,996</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Delete</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">146</td><td></td><td></td></tr>
-<tr><td><a href="#t2">Post</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">111</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">7,253</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6,615</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Example test run</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Get &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.shaku.AddPersonTest</td><td><a href="#m0">testAddUser</a></td><td rowspan="1">1628780364440</td><td rowspan="1">6832</td></tr><tr class="passedeven"><td><a href="#m1">testAddUser_200</a></td><td rowspan="1">1628780371322</td><td rowspan="1">73</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Delete &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.shaku.PesronGetList</td><td><a href="#m2">testGetUser</a></td><td rowspan="1">1628780371415</td><td rowspan="1">43</td></tr><tr class="passedeven"><td><a href="#m3">testGetUser_200</a></td><td rowspan="1">1628780371460</td><td rowspan="1">97</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">Post &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.shaku.UpdateUserTest</td><td><a href="#m4">testUpdateUser</a></td><td rowspan="1">1628780371571</td><td rowspan="1">78</td></tr><tr class="failedeven"><td><a href="#m5">testUpdateUser_200</a></td><td rowspan="1">1628780371652</td><td rowspan="1">25</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.shaku.GetInvoiceTest</td><td><a href="#m0">testGetInvoice</a></td><td rowspan="1">1628822847700</td><td rowspan="1">6408</td></tr><tr class="passedeven"><td><a href="#m1">testGetInvoicer_200</a></td><td rowspan="1">1628822854161</td><td rowspan="1">113</td></tr></tbody>
 </table>
-<h2>Get</h2><h3 id="m0">com.shaku.AddPersonTest#testAddUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.shaku.AddPersonTest#testAddUser_200</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Delete</h2><h3 id="m2">com.shaku.PesronGetList#testGetUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.shaku.PesronGetList#testGetUser_200</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Post</h2><h3 id="m4">com.shaku.UpdateUserTest#testUpdateUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [200] but found [404]
-	at com.shaku.UpdateUserTest.testUpdateUser(UpdateUserTest.java:24)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.shaku.UpdateUserTest#testUpdateUser_200</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;timestamp&quot; (class com.shaku.model.person), not marked as ignorable (3 known properties: &quot;id&quot;, &quot;description&quot;, &quot;name&quot;])
- at [Source: (String)&quot;{&quot;timestamp&quot;:&quot;2021-08-12T14:59:31.672+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:&quot;&quot;,&quot;path&quot;:&quot;/api/persons/update/12&quot;}&quot;; line: 1, column: 15] (through reference chain: com.shaku.model.person[&quot;timestamp&quot;])
-	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
-	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:987)
-	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1974)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1701)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1679)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:330)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187)
-	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:322)
-	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4593)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3548)
-	at com.fasterxml.jackson.databind.ObjectMapper$readValue$2.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at com.fasterxml.jackson.databind.ObjectMapper$readValue$2.call(Unknown Source)
-	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.groovy:46)
-	at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
-	at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
-	at io.restassured.mapper.ObjectMapper$deserialize$0.call(Unknown Source)
-	at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:238)
-	at io.restassured.internal.mapping.ObjectMapping$parseWithJackson2$1.callStatic(Unknown Source)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:59)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:231)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
-	at com.shaku.UpdateUserTest.testUpdateUser_200(UpdateUserTest.java:32)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">com.shaku.GetInvoiceTest#testGetInvoice</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.shaku.GetInvoiceTest#testGetInvoicer_200</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

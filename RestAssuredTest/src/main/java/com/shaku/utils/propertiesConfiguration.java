@@ -15,7 +15,7 @@ public class propertiesConfiguration {
 		Properties prop = new Properties();
 		try (OutputStream output = new FileOutputStream("/Users/kumar/Documents/API/config.properties")) {
 			// set the properties value
-			prop.setProperty("HOST", "http://localhost:8080");
+			prop.setProperty("HOST", "http://localhost:8081");
 			// save properties to project root folder
 			prop.store(output, null);
 			System.out.println(prop);

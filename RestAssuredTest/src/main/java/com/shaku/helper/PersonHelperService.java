@@ -51,8 +51,36 @@ public class PersonHelperService {
 					.extract().response();
 			return response;
 		}
+		
+		
+	
+			
+			public Response GetInvoice() {
+				Properties prop =  propertiesConfiguration.loadFile();
+				RestAssured.baseURI = (String)prop.get("HOST");
+				RequestSpecification request = RestAssured.given();
+				Response response = request.get(Endpoints.GET_INVOICES,"1" );
+				return response;
+			}
+			
+			
+			public Response AddInvoice() {
+				Properties prop =  propertiesConfiguration.loadFile();
+				RestAssured.baseURI = (String)prop.get("HOST");
+				person   requestBody =  new person("Name3","Description");
+				Response response  = RestAssured.given()
+						                           .header("Content-type", "application/json")
+						                             .and()
+						                              .body(requestBody)
+						                              .when()
+						                                 .post(Endpoints.ADD_INVOICES )
+						                               .then()
+						                      .extract().response();
+				
+				
+				return response;
 	}
 	
-	
+}
 
 
